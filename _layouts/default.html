@@ -152,7 +152,9 @@
           <div class="docs-sidebar-title">Docs</div>
           <nav class="docs-nav">
             {% for doc in docs_pages %}
+            {% unless doc.nav_title == 'Docs Index' or doc.nav_title == 'Quick Start' or doc.nav_title == 'Changelog' %}
             <a href="{{ doc.url | relative_url }}"{% if doc.url == page.url %} class="current"{% endif %}>{{ doc.nav_title | default: doc.title }}</a>
+            {% endunless %}
             {% endfor %}
           </nav>
         </aside>
