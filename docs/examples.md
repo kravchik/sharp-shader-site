@@ -55,6 +55,6 @@ A practical order is:
 3. then move to `HeightFogLibExample` and `ToonShadingLibExample`.
 
 See also:
-- [Quick start](./quick-start.html)
+- [Quick start](../quick-start.html)
 - [Generation workflow](./generation-workflow.html)
 - [Troubleshooting](./troubleshooting.html)

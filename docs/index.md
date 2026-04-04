@@ -12,9 +12,9 @@ Public documentation for the current beta surface:
 
 - [Beta scope](./beta-scope.html)
 - [Supported environment matrix](./environment-matrix.html)
-- [Quick start](./quick-start.html)
+- [Quick start](../quick-start.html)
 - [Technical details](./technical-details.html)
-- [Changelog](./changelog.html)
+- [Changelog](../changelog.html)
 - [Authoring model](./authoring-model.html)
 - [C# to HLSL types](./type-mapping.html)
 - [Intrinsics and helpers](./intrinsics-and-helpers.html)

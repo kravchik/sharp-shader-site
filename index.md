@@ -35,7 +35,7 @@ It does not claim full HLSL coverage or broad production-ready workflow coverage
 
 ## Start Here
 
-- [Quick start](./docs/quick-start.html)
+- [Quick start](./quick-start.html)
 - [Examples](./docs/examples.html)
 - [Generation workflow](./docs/generation-workflow.html)
 - [Beta scope](./docs/beta-scope.html)
