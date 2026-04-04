@@ -8,7 +8,7 @@ nav_title: Authoring Model
 
 # Authoring Model
 
-`SharpShader` lets you author shader logic in a supported C# subset and generate HLSL from it inside the Unity workflow.
+Sharp Shader lets you author shader logic in a supported C# subset and generate HLSL from it inside the Unity workflow.
 
 Use this page as the broad guide for:
 - how shader-facing code is structured;
@@ -100,7 +100,7 @@ new float3(1f, 2f, 3f)
 math.float3(1f, 2f, 3f)
 ```
 
-`SharpShader` normalizes supported constructor-style forms to canonical HLSL constructor emit.
+Sharp Shader normalizes supported constructor-style forms to canonical HLSL constructor emit.
 
 ## Casts
 

@@ -42,7 +42,7 @@ using Unity.Mathematics;
 
 The intended model is:
 - write shader math in C# with `Unity.Mathematics`;
-- let `SharpShader` normalize it to canonical HLSL emit where needed.
+- let Sharp Shader normalize it to canonical HLSL emit where needed.
 
 If plain `Unity.Mathematics` is not enough, there are two additional helper surfaces:
 - `ShaderMathMatrixCompat` for matrix-oriented helpers;

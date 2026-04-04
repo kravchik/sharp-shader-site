@@ -1,11 +1,11 @@
 ---
 layout: default
-title: SharpShader
+title: Sharp Shader
 ---
 
-# SharpShader
+# Sharp Shader
 
-`SharpShader` is a Unity-oriented beta toolchain for authoring shader logic in C# and generating HLSL from it.
+Sharp Shader is a Unity-oriented beta toolchain for authoring shader logic in C# and generating HLSL from it.
 
 It is built for technical users who want shader authoring to behave more like normal engineering work:
 - shader logic lives in ordinary C# functions and structs;
@@ -27,7 +27,7 @@ It does not claim full HLSL coverage or broad production-ready workflow coverage
 
 ## Why Use It
 
-`SharpShader` is useful when you want to:
+Sharp Shader is useful when you want to:
 - keep shader logic in a structured, refactorable C# codebase;
 - iterate through generate -> compile instead of editing raw HLSL first;
 - validate behavior with repeatable checks and narrow diagnostics;

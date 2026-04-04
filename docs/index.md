@@ -1,12 +1,12 @@
 ---
 layout: default
-title: SharpShader Docs
+title: Sharp Shader Docs
 section: docs
 nav_order: 10
 nav_title: Docs Index
 ---
 
-# SharpShader Docs
+# Sharp Shader Docs
 
 Public documentation for the current beta surface:
 
