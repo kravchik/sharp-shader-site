@@ -1,3 +1,8 @@
+---
+layout: default
+title: Technical details
+---
+
 # Technical details
 
 Key features in the current beta package:

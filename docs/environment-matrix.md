@@ -1,3 +1,8 @@
+---
+layout: default
+title: Supported Environment Matrix
+---
+
 # Supported Environment Matrix
 
 This matrix describes the environment that is currently validated for the beta contract.

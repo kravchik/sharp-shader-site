@@ -1,3 +1,8 @@
+---
+layout: default
+title: Generation Workflow
+---
+
 # Generation Workflow
 
 ## Entry point

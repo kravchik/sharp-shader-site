@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <style>
+    :root {
+      --bg: #f6f3ea;
+      --fg: #1f1d1a;
+      --muted: #6d665d;
+      --accent: #0d6b66;
+      --line: #d8cfbf;
+      --panel: #fffdf8;
+      --code: #efe7d9;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      background: linear-gradient(180deg, #f3efe5 0%, var(--bg) 100%);
+      color: var(--fg);
+      line-height: 1.65;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 28px;
+      padding-bottom: 18px;
+    }
+    .brand {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: var(--fg);
+    }
+    nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 14px; }
+    nav a { color: var(--accent); text-decoration: none; }
+    nav a:hover { text-decoration: underline; }
+    main {
+      background: color-mix(in srgb, var(--panel) 92%, white 8%);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 30px rgba(40, 30, 10, 0.05);
+    }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { margin-top: 0; font-size: 2.4rem; }
+    h2 { margin-top: 2rem; font-size: 1.45rem; }
+    a { color: var(--accent); }
+    code {
+      background: var(--code);
+      padding: 0.12rem 0.35rem;
+      border-radius: 6px;
+      font-size: 0.94em;
+    }
+    pre {
+      background: #1f2430;
+      color: #eef2f7;
+      padding: 16px;
+      overflow: auto;
+      border-radius: 12px;
+    }
+    pre code { background: transparent; padding: 0; color: inherit; }
+    ul, ol { padding-left: 1.35rem; }
+    footer {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-top: 18px;
+      padding-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="{{ '/' | relative_url }}">SharpShader</a>
+      <nav>
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/docs/index.html' | relative_url }}">Docs</a>
+        <a href="{{ '/docs/quick-start.html' | relative_url }}">Quick Start</a>
+        <a href="{{ '/docs/examples.html' | relative_url }}">Examples</a>
+        <a href="{{ '/docs/troubleshooting.html' | relative_url }}">Troubleshooting</a>
+        <a href="{{ '/docs/changelog.html' | relative_url }}">Changelog</a>
+      </nav>
+    </header>
+    <main>
+{{ content }}
+    </main>
+    <footer>
+      Current public beta docs for SharpShader.
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,3 +1,8 @@
+---
+layout: default
+title: SharpShader
+---
+
 # SharpShader
 
 `SharpShader` is a Unity-oriented beta toolchain for authoring shader logic in C# and generating HLSL from it.
@@ -30,13 +35,13 @@ It does not claim full HLSL coverage or broad production-ready workflow coverage
 
 ## Start Here
 
-- [Quick start](./docs/quick-start.md)
-- [Examples](./docs/examples.md)
-- [Generation workflow](./docs/generation-workflow.md)
-- [Beta scope](./docs/beta-scope.md)
-- [Supported environment matrix](./docs/environment-matrix.md)
-- [Troubleshooting](./docs/troubleshooting.md)
-- [Full docs index](./docs/index.md)
+- [Quick start](./docs/quick-start.html)
+- [Examples](./docs/examples.html)
+- [Generation workflow](./docs/generation-workflow.html)
+- [Beta scope](./docs/beta-scope.html)
+- [Supported environment matrix](./docs/environment-matrix.html)
+- [Troubleshooting](./docs/troubleshooting.html)
+- [Full docs index](./docs/index.html)
 
 ## Who It Is For
 
@@ -60,6 +65,6 @@ The supported public surface is intentionally explicit.
 If a workflow or feature is not described in the public docs, do not treat it as part of the current beta contract.
 
 Read these before treating a workflow as supported:
-- [Beta scope](./docs/beta-scope.md)
-- [Supported environment matrix](./docs/environment-matrix.md)
-- [Docs index](./docs/index.md)
+- [Beta scope](./docs/beta-scope.html)
+- [Supported environment matrix](./docs/environment-matrix.html)
+- [Docs index](./docs/index.html)

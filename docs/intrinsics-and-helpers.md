@@ -1,3 +1,8 @@
+---
+layout: default
+title: Intrinsics and Helpers
+---
+
 # Intrinsics and Helpers
 
 This page explains where shader-style math and helper operations should come from in C# authoring.
@@ -121,7 +126,7 @@ Why not ordinary C# ternary:
 If ordinary C# ternary already expresses the intent clearly, prefer the ternary.
 
 For casts and reinterpret helpers such as `to_*`, `asint`, `asuint`, and `asfloat`, see:
-- [C# to HLSL types](./type-mapping.md)
+- [C# to HLSL types](./type-mapping.html)
 
 ## What not to assume
 
@@ -134,7 +139,7 @@ If a function family is not documented in the public beta docs, do not assume it
 
 ## See also
 
-- [C# to HLSL types](./type-mapping.md)
-- [Authoring model](./authoring-model.md)
-- [Resources](./resources.md)
-- [Beta scope](./beta-scope.md)
+- [C# to HLSL types](./type-mapping.html)
+- [Authoring model](./authoring-model.html)
+- [Resources](./resources.html)
+- [Beta scope](./beta-scope.html)

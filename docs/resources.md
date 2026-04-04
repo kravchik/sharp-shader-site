@@ -1,3 +1,8 @@
+---
+layout: default
+title: Resources
+---
+
 # Resources
 
 This page gives a short public overview of the current resource authoring surface.
@@ -79,7 +84,7 @@ If your workflow depends heavily on buffer or RW resource forms, treat the docum
 
 ## See also
 
-- [Authoring model](./authoring-model.md)
-- [C# to HLSL types](./type-mapping.md)
-- [Generation workflow](./generation-workflow.md)
-- [Beta scope](./beta-scope.md)
+- [Authoring model](./authoring-model.html)
+- [C# to HLSL types](./type-mapping.html)
+- [Generation workflow](./generation-workflow.html)
+- [Beta scope](./beta-scope.html)

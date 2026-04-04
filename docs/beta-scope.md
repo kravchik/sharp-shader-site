@@ -1,3 +1,8 @@
+---
+layout: default
+title: Beta Scope
+---
+
 # Beta Scope
 
 `SharpShader` is a Unity-oriented preview toolchain for authoring shader logic in C# and generating HLSL from it.

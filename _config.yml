@@ -1,0 +1,7 @@
+title: SharpShader
+description: C# shader authoring to HLSL for Unity
+markdown: kramdown
+theme: null
+plugins: []
+exclude:
+  - README.md

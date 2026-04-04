@@ -1,3 +1,8 @@
+---
+layout: default
+title: Changelog
+---
+
 # Changelog
 
 ## 0.1.0-beta

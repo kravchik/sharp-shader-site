@@ -1,3 +1,8 @@
+---
+layout: default
+title: Troubleshooting
+---
+
 # Troubleshooting
 
 This page covers the most common current beta issues and what they mean.
@@ -33,9 +38,9 @@ The intended behavior is:
 - unsupported authoring fails with explicit diagnostics instead of partial or misleading output.
 
 Use these docs as the contract boundary:
-- [Beta scope](./beta-scope.md)
-- [Authoring model](./authoring-model.md)
-- [Resources](./resources.md)
+- [Beta scope](./beta-scope.html)
+- [Authoring model](./authoring-model.html)
+- [Resources](./resources.html)
 
 ## Visual example assets are not in the package
 

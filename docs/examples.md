@@ -1,3 +1,8 @@
+---
+layout: default
+title: Examples
+---
+
 # Examples
 
 The shipped beta examples are intentionally small.
@@ -47,6 +52,6 @@ A practical order is:
 3. then move to `HeightFogLibExample` and `ToonShadingLibExample`.
 
 See also:
-- [Quick start](./quick-start.md)
-- [Generation workflow](./generation-workflow.md)
-- [Troubleshooting](./troubleshooting.md)
+- [Quick start](./quick-start.html)
+- [Generation workflow](./generation-workflow.html)
+- [Troubleshooting](./troubleshooting.html)

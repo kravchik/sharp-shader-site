@@ -1,3 +1,8 @@
+---
+layout: default
+title: Authoring Model
+---
+
 # Authoring Model
 
 `SharpShader` lets you author shader logic in a supported C# subset and generate HLSL from it inside the Unity workflow.
@@ -8,9 +13,9 @@ Use this page as the broad guide for:
 - how to express basic control and data-shaping patterns.
 
 Specialized topics stay in separate pages:
-- [C# to HLSL types](./type-mapping.md)
-- [Intrinsics and helpers](./intrinsics-and-helpers.md)
-- [Resources](./resources.md)
+- [C# to HLSL types](./type-mapping.html)
+- [Intrinsics and helpers](./intrinsics-and-helpers.html)
+- [Resources](./resources.html)
 
 ## Current public authoring markers
 
@@ -81,7 +86,7 @@ Current user-struct authoring is centered on:
 Vector and matrix families follow the `Unity.Mathematics` style.
 
 Use the dedicated type mapping page for the detailed reference:
-- [C# to HLSL types](./type-mapping.md)
+- [C# to HLSL types](./type-mapping.html)
 
 ## Constructors
 
@@ -131,8 +136,8 @@ When authoring falls outside the supported surface, the expected behavior is:
 
 ## See also
 
-- [C# to HLSL types](./type-mapping.md)
-- [Intrinsics and helpers](./intrinsics-and-helpers.md)
-- [Resources](./resources.md)
-- [Generation workflow](./generation-workflow.md)
-- [Beta scope](./beta-scope.md)
+- [C# to HLSL types](./type-mapping.html)
+- [Intrinsics and helpers](./intrinsics-and-helpers.html)
+- [Resources](./resources.html)
+- [Generation workflow](./generation-workflow.html)
+- [Beta scope](./beta-scope.html)

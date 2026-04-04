@@ -1,3 +1,8 @@
+---
+layout: default
+title: Quick Start
+---
+
 # Quick Start
 
 This quick start covers the current supported beta path.
@@ -12,7 +17,7 @@ For the current public path, ensure:
 - the project opens and compiles scripts normally.
 
 The validated beta environment is documented separately in:
-- [Supported environment matrix](./environment-matrix.md)
+- [Supported environment matrix](./environment-matrix.html)
 
 ## 2. Author a shader function in C#
 
@@ -60,8 +65,8 @@ For the supported beta workflow, validate that:
 - unsupported forms produce actionable diagnostics instead of partial output.
 
 See:
-- [Generation workflow](./generation-workflow.md)
-- [Examples](./examples.md)
-- [Troubleshooting](./troubleshooting.md)
-- [Authoring model](./authoring-model.md)
-- [Beta scope](./beta-scope.md)
+- [Generation workflow](./generation-workflow.html)
+- [Examples](./examples.html)
+- [Troubleshooting](./troubleshooting.html)
+- [Authoring model](./authoring-model.html)
+- [Beta scope](./beta-scope.html)

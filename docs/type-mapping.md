@@ -1,3 +1,8 @@
+---
+layout: default
+title: C# to HLSL Types
+---
+
 # C# to HLSL Types
 
 This page shows the current beta authoring model for numeric types, swizzles, constructors, and casts in `SharpShader`.
@@ -117,8 +122,8 @@ This page does not claim:
 - broad backend guarantees beyond the current beta environment.
 
 For the current public beta contract, also see:
-- [Intrinsics and helpers](./intrinsics-and-helpers.md)
-- [Authoring model](./authoring-model.md)
-- [Resources](./resources.md)
-- [Beta scope](./beta-scope.md)
-- [Generation workflow](./generation-workflow.md)
+- [Intrinsics and helpers](./intrinsics-and-helpers.html)
+- [Authoring model](./authoring-model.html)
+- [Resources](./resources.html)
+- [Beta scope](./beta-scope.html)
+- [Generation workflow](./generation-workflow.html)
