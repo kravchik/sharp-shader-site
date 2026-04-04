@@ -16,7 +16,7 @@ They are meant to show two things clearly:
 ## Package examples
 
 The package currently ships three code-first examples in:
-- `Packages/com.kravchik.cs2hlsl/Examples/Functions/`
+- `Packages/com.sharpshader/Examples/Functions/`
 
 Current examples:
 - `SampleGrayscaleTintLibExample`
@@ -24,7 +24,7 @@ Current examples:
 - `ToonShadingLibExample`
 
 Matching demo tests live in:
-- `Packages/com.kravchik.cs2hlsl/Examples/Tests/`
+- `Packages/com.sharpshader/Examples/Tests/`
 
 Current demo tests:
 - `SampleGrayscaleTintTestExample`
