@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Beta Scope
+section: docs
+nav_order: 90
+nav_title: Beta Scope
 ---
 
 # Beta Scope

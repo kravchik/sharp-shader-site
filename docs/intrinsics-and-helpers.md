@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Intrinsics and Helpers
+section: docs
+nav_order: 70
+nav_title: Intrinsics and Helpers
 ---
 
 # Intrinsics and Helpers

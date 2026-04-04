@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Authoring Model
+section: docs
+nav_order: 50
+nav_title: Authoring Model
 ---
 
 # Authoring Model

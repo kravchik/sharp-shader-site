@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Quick Start
+section: docs
+nav_order: 20
+nav_title: Quick Start
 ---
 
 # Quick Start

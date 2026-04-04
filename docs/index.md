@@ -1,6 +1,9 @@
 ---
 layout: default
 title: SharpShader Docs
+section: docs
+nav_order: 10
+nav_title: Docs Index
 ---
 
 # SharpShader Docs

@@ -1,6 +1,9 @@
 ---
 layout: default
 title: C# to HLSL Types
+section: docs
+nav_order: 60
+nav_title: C# to HLSL Types
 ---
 
 # C# to HLSL Types

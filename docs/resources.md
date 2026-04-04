@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Resources
+section: docs
+nav_order: 80
+nav_title: Resources
 ---
 
 # Resources

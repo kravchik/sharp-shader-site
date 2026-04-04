@@ -14,6 +14,7 @@
       --line: #d8cfbf;
       --panel: #fffdf8;
       --code: #efe7d9;
+      --sidebar: #f7f1e5;
     }
     * { box-sizing: border-box; }
     body {
@@ -23,7 +24,7 @@
       color: var(--fg);
       line-height: 1.65;
     }
-    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 24px; }
     header {
       border-bottom: 1px solid var(--line);
       margin-bottom: 28px;
@@ -36,15 +37,64 @@
       text-decoration: none;
       color: var(--fg);
     }
-    nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 14px; }
-    nav a { color: var(--accent); text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    main {
+    .top-nav { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .top-nav a { color: var(--accent); text-decoration: none; }
+    .top-nav a:hover { text-decoration: underline; }
+    .page-shell {
       background: color-mix(in srgb, var(--panel) 92%, white 8%);
       border: 1px solid var(--line);
       border-radius: 16px;
-      padding: 28px;
       box-shadow: 0 8px 30px rgba(40, 30, 10, 0.05);
+      overflow: hidden;
+    }
+    .page-main {
+      padding: 28px;
+      min-width: 0;
+    }
+    .docs-shell {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      align-items: start;
+    }
+    .docs-sidebar {
+      background: linear-gradient(180deg, var(--sidebar) 0%, #f3ecdf 100%);
+      border-right: 1px solid var(--line);
+      padding: 24px 18px;
+      min-height: 100%;
+      position: sticky;
+      top: 0;
+    }
+    .docs-sidebar-title {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    .docs-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .docs-nav a {
+      color: var(--fg);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 10px;
+    }
+    .docs-nav a:hover {
+      background: rgba(13, 107, 102, 0.08);
+      color: var(--accent);
+    }
+    .docs-nav a.current {
+      background: rgba(13, 107, 102, 0.14);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    .docs-eyebrow {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
     }
     h1, h2, h3 { line-height: 1.2; }
     h1 { margin-top: 0; font-size: 2.4rem; }
@@ -71,13 +121,24 @@
       margin-top: 18px;
       padding-top: 8px;
     }
+    @media (max-width: 920px) {
+      .docs-shell {
+        grid-template-columns: 1fr;
+      }
+      .docs-sidebar {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        position: static;
+      }
+    }
   </style>
 </head>
 <body>
+  {% assign docs_pages = site.pages | where: "section", "docs" | sort: "nav_order" %}
   <div class="wrap">
     <header>
       <a class="brand" href="{{ '/' | relative_url }}">SharpShader</a>
-      <nav>
+      <nav class="top-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
         <a href="{{ '/docs/index.html' | relative_url }}">Docs</a>
         <a href="{{ '/docs/quick-start.html' | relative_url }}">Quick Start</a>
@@ -86,9 +147,28 @@
         <a href="{{ '/docs/changelog.html' | relative_url }}">Changelog</a>
       </nav>
     </header>
-    <main>
+    <div class="page-shell">
+      {% if page.section == 'docs' %}
+      <div class="docs-shell">
+        <aside class="docs-sidebar">
+          <div class="docs-sidebar-title">Docs</div>
+          <nav class="docs-nav">
+            {% for doc in docs_pages %}
+            <a href="{{ doc.url | relative_url }}"{% if doc.url == page.url %} class="current"{% endif %}>{{ doc.nav_title | default: doc.title }}</a>
+            {% endfor %}
+          </nav>
+        </aside>
+        <main class="page-main">
+          <div class="docs-eyebrow">Docs / {{ page.nav_title | default: page.title }}</div>
 {{ content }}
-    </main>
+        </main>
+      </div>
+      {% else %}
+      <main class="page-main">
+{{ content }}
+      </main>
+      {% endif %}
+    </div>
     <footer>
       Current public beta docs for SharpShader.
     </footer>

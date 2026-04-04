@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Changelog
+section: docs
+nav_order: 130
+nav_title: Changelog
 ---
 
 # Changelog

@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Troubleshooting
+section: docs
+nav_order: 120
+nav_title: Troubleshooting
 ---
 
 # Troubleshooting

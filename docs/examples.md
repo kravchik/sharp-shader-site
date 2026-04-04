@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Examples
+section: docs
+nav_order: 30
+nav_title: Examples
 ---
 
 # Examples

@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Generation Workflow
+section: docs
+nav_order: 40
+nav_title: Generation Workflow
 ---
 
 # Generation Workflow

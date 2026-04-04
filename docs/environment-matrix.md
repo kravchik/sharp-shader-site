@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Supported Environment Matrix
+section: docs
+nav_order: 100
+nav_title: Supported Environment Matrix
 ---
 
 # Supported Environment Matrix

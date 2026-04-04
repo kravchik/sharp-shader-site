@@ -1,6 +1,9 @@
 ---
 layout: default
 title: Technical details
+section: docs
+nav_order: 110
+nav_title: Technical Details
 ---
 
 # Technical details
