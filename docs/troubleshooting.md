@@ -38,7 +38,7 @@ The intended behavior is:
 Use these docs as the contract boundary:
 - [Technical details](./technical-details.html)
 - [Resources](./resources.html)
-- [Docs index](./index.html)
+- [Docs index](./docs-index.html)
 
 ## Visual example assets are not in the package
 

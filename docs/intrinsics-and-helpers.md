@@ -138,4 +138,4 @@ If a function family is not documented in the public docs, do not assume it is p
 - [C# to HLSL types](./type-mapping.html)
 - [Technical details](./technical-details.html)
 - [Resources](./resources.html)
-- [Docs index](./index.html)
+- [Docs index](./docs-index.html)

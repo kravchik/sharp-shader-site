@@ -121,4 +121,4 @@ See also:
 - [Intrinsics and helpers](./intrinsics-and-helpers.html)
 - [Technical details](./technical-details.html)
 - [Resources](./resources.html)
-- [Docs index](./index.html)
+- [Docs index](./docs-index.html)

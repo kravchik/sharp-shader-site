@@ -82,4 +82,4 @@ If your workflow depends heavily on buffer or RW resource forms, use the documen
 
 - [C# to HLSL types](./type-mapping.html)
 - [Technical details](./technical-details.html)
-- [Docs index](./index.html)
+- [Docs index](./docs-index.html)

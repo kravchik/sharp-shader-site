@@ -62,4 +62,4 @@ If something is unsupported or broken, Sharp Shader reports diagnostics instead 
 
 - [Technical details](./technical-details.html)
 - [Troubleshooting](./troubleshooting.html)
-- [Docs index](./index.html)
+- [Docs index](./docs-index.html)

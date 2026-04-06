@@ -5,15 +5,12 @@ title: Sharp Shader
 
 # Sharp Shader
 
-## What It Is
-
 Sharp Shader is a Unity-oriented toolchain for authoring shader logic in C# and generating HLSL from it.
 
-## Why It Matters
+## About
 
-Sharp Shader makes shader authoring simpler, more inspectable, and easier to change than a separate opaque workflow.
-It fits naturally into IDE-driven, testable, debuggable workflows and makes shader code easier to review, inspect, and evolve.
-It is also AI-development-friendly because shader logic stays in ordinary C# code that can participate in normal .NET tooling, execution, and static analysis.
+Sharp Shader lets you write shaders in C#. With natural IDE support, additional checks, and API guardrails, it greatly simplifies writing, testing, debugging, maintaining, and evolving shaders.
+It is also AI-development-friendly because shader logic stays in ordinary C# code that can participate in normal .NET tooling, testing, execution, and static analysis.
 
 ## Features
 
@@ -25,7 +22,7 @@ It is also AI-development-friendly because shader logic stays in ordinary C# cod
 - automatic Shader Graph node generation for the currently supported bridge
 - CPU-side math and behavior stubs for shader-oriented authoring workflows
 
-## Current Spec
+## Spec
 
 - shader logic authored through ordinary C# functions, structs, and Sharp Shader attributes;
 - automatic or explicit generation and compile workflow inside Unity;
@@ -39,14 +36,7 @@ It is also AI-development-friendly because shader logic stays in ordinary C# cod
 This beta is intentionally narrow.
 It does not claim full HLSL coverage or broad production-ready workflow coverage yet.
 
-## Docs Index
-
-- [Quick start](./docs/quick-start.html)
-- [Technical details](./docs/technical-details.html)
-- [Troubleshooting](./docs/troubleshooting.html)
-- [Full docs index](./docs/index.html)
-
-## Current Plans
+## Plans
 
 Current work is focused on:
 - widening validated authoring and generation coverage;
@@ -62,3 +52,6 @@ Current work is focused on:
 
 - [Unity Asset Store](https://assetstore.unity.com/packages/slug/368862)
 - [Official Site](http://sharpshader.com)
+- [Quick start](./docs/quick-start.html)
+- [Changelog](./docs/changelog.html)
+- [Docs](./docs/docs-index.html)
