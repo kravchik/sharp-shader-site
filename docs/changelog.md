@@ -3,8 +3,21 @@ layout: default
 title: Changelog
 ---
 
-<meta http-equiv="refresh" content="0; url={{ '/changelog.html' | relative_url }}">
+# Changelog
 
-# Changelog moved
+## 0.1.0-beta
 
-This page moved to [Changelog]({{ '/changelog.html' | relative_url }}).
+First public beta / preview scope.
+
+Current highlights:
+- C# shader authoring through `ShaderFunction`, `ShaderStruct`, and explicit `ShaderGraphFunction`;
+- IDE-friendly, testable, and debuggable shader-facing authoring flow;
+- actionable diagnostics for the main unsupported authoring forms;
+- compile-time ordinary constants emitted by reference closure;
+- validated end-to-end, clean-install, and pre-release validation flows for the current narrow beta environment.
+
+Current intentional limits:
+- not full HLSL surface coverage;
+- not the full texture/resource completion story;
+- not broad cross-platform validation;
+- external constants remain outside the public beta contract.

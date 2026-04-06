@@ -1,16 +1,9 @@
 ---
 layout: default
 title: Intrinsics and Helpers
-section: docs
-nav_order: 70
-nav_title: Intrinsics and Helpers
 ---
 
 # Intrinsics and Helpers
-
-This page explains where shader-style math and helper operations should come from in C# authoring.
-
-It is a practical beta guide, not a full overload catalog.
 
 ## Default rule: use `Unity.Mathematics`
 
@@ -72,7 +65,7 @@ These are authoring helpers. Generated HLSL is normalized to direct matrix/vecto
 
 Use `ShaderMathCompat` when plain `math.*` does not express the intended shader authoring form cleanly.
 
-Current practical uses:
+Typical uses:
 - `mask(...)` conditional selection helpers;
 - constructor-style helper forms when needed.
 - a few narrow compatibility helpers such as `abs` for `half`.
@@ -117,7 +110,7 @@ Matrix example (`float2x2`):
 | --- | --- |
 | `ShaderMathCompat.mask(maskM, m1, m0)` | `maskM ? m1 : m0` |
 
-Current implementation note:
+Implementation note:
 - in translated shader code, `mask(...)` is currently lowered to a conditional expression;
 - the docs describe the generated shader result shown in the examples above, not a promise about the exact intermediate rewrite steps.
 
@@ -133,16 +126,16 @@ For casts and reinterpret helpers such as `to_*`, `asint`, `asuint`, and `asfloa
 
 ## What not to assume
 
-Do not treat this beta as:
+Do not treat this as:
 - a full replacement for every HLSL intrinsic;
-- a promise that every `Unity.Mathematics` overload is part of the supported public beta surface;
+- a promise that every `Unity.Mathematics` overload is part of the supported surface;
 - a promise that every helper in runtime is equally promoted in public docs.
 
-If a function family is not documented in the public beta docs, do not assume it is part of the stable public contract yet.
+If a function family is not documented in the public docs, do not assume it is part of the stable public contract.
 
 ## See also
 
 - [C# to HLSL types](./type-mapping.html)
-- [Authoring model](./authoring-model.html)
+- [Technical details](./technical-details.html)
 - [Resources](./resources.html)
-- [Beta scope](./beta-scope.html)
+- [Docs index](./index.html)

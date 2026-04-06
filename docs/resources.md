@@ -1,22 +1,15 @@
 ---
 layout: default
 title: Resources
-section: docs
-nav_order: 80
-nav_title: Resources
 ---
 
 # Resources
 
-This page gives a short public overview of the current resource authoring surface.
+Sharp Shader exposes shader-facing resource types as explicit C# runtime types. Use them in translated method signatures and resource access code, then let generation lower them to the matching HLSL resource forms.
 
-It is a beta summary, not a full resource API reference.
+## Resource families
 
-## Current model
-
-Resource authoring uses explicit shader-facing resource types from the runtime surface.
-
-Typical families include:
+Texture, sampler, and buffer/resource families include:
 - `Texture1D<T>`
 - `Texture2D<T>`
 - `Texture2DArray<T>`
@@ -29,17 +22,11 @@ Typical families include:
 - `SamplerComparisonState`
 - read-only / read-write buffer families
 
-## Where resources are supported
+These are explicit shader-facing types. They are not intended to model arbitrary general-purpose C# resource objects.
 
-In the current public beta contract, resource types are primarily intended for:
-- function parameters;
-- local aliases of supported resource parameters.
+## Typical usage
 
-Do not assume arbitrary resource placement across the full C# type system.
-
-## Typical resource authoring
-
-Typical usage keeps the authoring shape close to shader code:
+The common authoring pattern is to place resources directly in translated function signatures:
 
 ```csharp
 [ShaderFunction]
@@ -54,12 +41,20 @@ The intended model is:
 - use resource methods in familiar shader-style forms;
 - let generation normalize them to canonical HLSL object-method calls.
 
+## Supported placement
+
+Resource types are primarily intended for:
+- function parameters;
+- local aliases of supported resource parameters.
+
+Do not assume arbitrary resource placement across the full C# type system.
+
 ## Texture value families
 
-The current beta surface does not claim every possible resource/value combination.
+Not every resource/value combination is valid.
 
-One practical example from the current MVP surface:
-- `Texture2D<T>` supports current MVP translation for scalar and vector families built around:
+One practical example:
+- `Texture2D<T>` supports translation for scalar and vector families built around:
   - `float`
   - `half`
   - `int`
@@ -67,11 +62,11 @@ One practical example from the current MVP surface:
   - `bool`
   - narrower `double` support
 
-Treat documented resource families as the public contract. Do not assume every generic type argument is valid just because the C# generic form exists.
+Treat documented resource families as the contract. Do not assume every generic type argument is valid just because the generic C# form exists.
 
 ## Samplers
 
-Sampler authoring uses explicit runtime types:
+Sampler authoring uses the explicit runtime types:
 - `SamplerState`
 - `SamplerComparisonState`
 
@@ -81,13 +76,10 @@ Use them as explicit parameters in translated functions.
 
 The runtime surface also includes read-only and read-write buffer/resource families.
 
-That surface exists, but the current public beta docs keep the contract summary intentionally short.
-
-If your workflow depends heavily on buffer or RW resource forms, treat the documented beta pages and current validated examples as the source of truth rather than assuming broad parity with all HLSL forms.
+If your workflow depends heavily on buffer or RW resource forms, use the documented guides and current validated examples as the source of truth rather than assuming broad parity with every HLSL form.
 
 ## See also
 
-- [Authoring model](./authoring-model.html)
 - [C# to HLSL types](./type-mapping.html)
-- [Generation workflow](./generation-workflow.html)
-- [Beta scope](./beta-scope.html)
+- [Technical details](./technical-details.html)
+- [Docs index](./index.html)

@@ -1,16 +1,9 @@
 ---
 layout: default
 title: C# to HLSL Types
-section: docs
-nav_order: 60
-nav_title: C# to HLSL Types
 ---
 
 # C# to HLSL Types
-
-This page shows the current beta authoring model for numeric types, swizzles, constructors, and casts in `SharpShader`.
-
-It is a practical mapping guide, not a full overload reference.
 
 ## Scalar types
 
@@ -27,7 +20,7 @@ Common scalar authoring types map directly to the same HLSL scalar families:
 
 ## Vector types
 
-`SharpShader` follows the `Unity.Mathematics` vector families.
+Sharp Shader follows the `Unity.Mathematics` vector families.
 
 | C# authoring type | Generated HLSL family |
 | --- | --- |
@@ -47,7 +40,7 @@ Typical component and swizzle access keeps the same intent:
 
 ## Matrix types
 
-The beta surface currently follows the same `Unity.Mathematics` matrix naming families.
+Sharp Shader follows the same `Unity.Mathematics` matrix naming families.
 
 | C# authoring type family | Generated HLSL family |
 | --- | --- |
@@ -77,7 +70,7 @@ Matrix authoring uses the `Unity.Mathematics` column fields:
 
 ## Constructors
 
-The supported authoring surface intentionally accepts several constructor-style forms and normalizes them to canonical HLSL constructors.
+The supported authoring surface accepts several constructor-style forms and normalizes them to canonical HLSL constructors.
 
 Typical setup:
 
@@ -115,18 +108,17 @@ Common cases:
 
 Preferred rule:
 - use ordinary C# casts first;
-- use `ShaderMathCompat.to_*` or `as*` helpers when that expresses the shader intent more clearly or matches the available beta surface better.
+- use `ShaderMathCompat.to_*` or `as*` helpers when that expresses the shader intent more clearly or matches the available surface better.
 
-## What this page is not
+## Scope limits
 
-This page does not claim:
+Do not assume:
 - every overload for every numeric family;
 - full resource type coverage;
-- broad backend guarantees beyond the current beta environment.
+- broad backend guarantees beyond the current validated environment.
 
-For the current public beta contract, also see:
+See also:
 - [Intrinsics and helpers](./intrinsics-and-helpers.html)
-- [Authoring model](./authoring-model.html)
+- [Technical details](./technical-details.html)
 - [Resources](./resources.html)
-- [Beta scope](./beta-scope.html)
-- [Generation workflow](./generation-workflow.html)
+- [Docs index](./index.html)
