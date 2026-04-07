@@ -5,12 +5,17 @@ title: Resources
 
 # Resources
 
-Sharp Shader exposes shader-facing resource types as explicit C# runtime types. Use them in translated method signatures and resource access code, then let generation lower them to the matching HLSL resource forms.
+Sharp Shader exposes shader-facing resource types as explicit C# types. They provide both shader API and basic CPU simulation for testing and debugging.
+
+These types live in `SharpShader.Hlsl`.
+
+You use them as a parameter to a function. In C# unit tests you can also create them.
 
 ## Resource families
 
-Texture, sampler, and buffer/resource families include:
+Sampled texture families:
 - `Texture1D<T>`
+- `Texture1DArray<T>`
 - `Texture2D<T>`
 - `Texture2DArray<T>`
 - `Texture3D<T>`
@@ -18,15 +23,33 @@ Texture, sampler, and buffer/resource families include:
 - `TextureCubeArray<T>`
 - `Texture2DMS<T>`
 - `Texture2DMSArray<T>`
+
+Read-only buffer families:
+- `Buffer<T>`
+- `StructuredBuffer<T>`
+- `ByteAddressBuffer`
+
+Read-write texture and buffer families:
+- `RWBuffer<T>`
+- `RWTexture1D<T>`
+- `RWTexture1DArray<T>`
+- `RWTexture2D<T>`
+- `RWTexture2DArray<T>`
+- `RWTexture3D<T>`
+- `RWStructuredBuffer<T>`
+- `RWByteAddressBuffer`
+- `AppendStructuredBuffer<T>`
+- `ConsumeStructuredBuffer<T>`
+
+Sampler families:
 - `SamplerState`
 - `SamplerComparisonState`
-- read-only / read-write buffer families
 
-These are explicit shader-facing types. They are not intended to model arbitrary general-purpose C# resource objects.
+Helper view types such as `mips`/`sample` slices are also part of the public surface for the relevant texture families.
 
 ## Typical usage
 
-The common authoring pattern is to place resources directly in translated function signatures:
+The common pattern is to use resources as parameters in translated functions:
 
 ```csharp
 [ShaderFunction]
@@ -36,47 +59,20 @@ public static float4 SampleColor(Texture2D<float4> texture, SamplerState sampler
 }
 ```
 
-The intended model is:
-- write resource access in explicit shader-facing method signatures;
-- use resource methods in familiar shader-style forms;
-- let generation normalize them to canonical HLSL object-method calls.
+The same types can also be created in C# tests for CPU-side validation:
 
-## Supported placement
+```csharp
+var texture = new Texture2D<float4>(2, 2, new[]
+{
+    new float4(1, 0, 0, 1),
+    new float4(0, 1, 0, 1),
+    new float4(0, 0, 1, 1),
+    new float4(1, 1, 1, 1),
+});
 
-Resource types are primarily intended for:
-- function parameters;
-- local aliases of supported resource parameters.
-
-Do not assume arbitrary resource placement across the full C# type system.
-
-## Texture value families
-
-Not every resource/value combination is valid.
-
-One practical example:
-- `Texture2D<T>` supports translation for scalar and vector families built around:
-  - `float`
-  - `half`
-  - `int`
-  - `uint`
-  - `bool`
-  - narrower `double` support
-
-Treat documented resource families as the contract. Do not assume every generic type argument is valid just because the generic C# form exists.
-
-## Samplers
-
-Sampler authoring uses the explicit runtime types:
-- `SamplerState`
-- `SamplerComparisonState`
-
-Use them as explicit parameters in translated functions.
-
-## Buffers and read/write resources
-
-The runtime surface also includes read-only and read-write buffer/resource families.
-
-If your workflow depends heavily on buffer or RW resource forms, use the documented guides and current validated examples as the source of truth rather than assuming broad parity with every HLSL form.
+var sampler = SamplerState.PointClamp;
+float4 color = texture.Sample(sampler, new float2(0.25f, 0.25f));
+```
 
 ## See also
 

@@ -5,11 +5,11 @@ title: Sharp Shader
 
 # Sharp Shader
 
-Sharp Shader is a Unity-oriented toolchain for authoring shader logic in C# and generating HLSL from it.
+`Sharp Shader` lets you develop shader logic in C# and use it as HLSL.
 
 ## About
 
-Sharp Shader lets you write shaders in C#. With natural IDE support, additional checks, and API guardrails, it greatly simplifies writing, testing, debugging, maintaining, and evolving shaders.
+`Sharp Shader` lets you write shaders in C#. With natural IDE support, additional checks, and API guardrails, it greatly simplifies writing, testing, debugging, maintaining, and evolving shaders.
 It is also AI-development-friendly because shader logic stays in ordinary C# code that can participate in normal .NET tooling, testing, execution, and static analysis.
 
 ## Features
@@ -19,22 +19,20 @@ It is also AI-development-friendly because shader logic stays in ordinary C# cod
 - testing support through standard Unity Test Framework / NUnit workflows
 - AI-development-friendly workflow through testable C# units and ordinary project tooling
 - code reusability across ordinary C# logic and shader-facing authoring code
-- automatic Shader Graph node generation for the currently supported bridge
+- Shader Graph node generation for explicitly marked functions
 - CPU-side math and behavior stubs for shader-oriented authoring workflows
 
 ## Spec
 
-- shader logic authored through ordinary C# functions, structs, and Sharp Shader attributes;
+- shader logic authored through ordinary C# functions, structs, and `Sharp Shader` attributes;
 - automatic or explicit generation and compile workflow inside Unity;
+- generated HLSL outputs written under `Assets/ShaderGen`;
 - constant propagation and reference-closure emission for ordinary compile-time constants;
 - Shader Graph bridge for generated functions;
 - texture, sampler, and resource stubs for authoring and validation;
 - CPU-side behavior stubs and emulation helpers for selected shader-facing types;
 - `Unity.Mathematics` used as the CPU-side backing for shader-oriented numeric code and stubs;
 - asmdef-aware generator placement and scoped analyzer/generator behavior in multi-assembly Unity projects;
-
-This beta is intentionally narrow.
-It does not claim full HLSL coverage or broad production-ready workflow coverage yet.
 
 ## Plans
 

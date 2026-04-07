@@ -5,15 +5,15 @@ title: Quick Start
 
 # Quick Start
 
-This quick start covers the current supported beta path.
+Fastest path to the first generated HLSL output.
 
 ## 1. Install into a Unity project
 
 Install Sharp Shader from the [Unity Asset Store](https://assetstore.unity.com/packages/slug/368862).
 
-## 2. Author a shader function in C#
+## 2. Write a shader function in C#
 
-Use the current public authoring annotations:
+Use the public Sharp Shader attributes:
 - `[ShaderFunction]`
 - `[ShaderStruct]`
 
@@ -21,6 +21,7 @@ Example:
 
 ```csharp
 using SharpShader;
+using SharpShader.Hlsl;
 using Unity.Mathematics;
 
 public static class MyShaderLib
@@ -35,7 +36,7 @@ public static class MyShaderLib
 
 ## 3. Run generation in Unity
 
-Use the Unity integration flow:
+Run:
 - `Tools/SharpShader/Generate`
 
 If you want generation to run automatically after script recompilation, enable:
@@ -45,7 +46,7 @@ If you want generation to run automatically after script recompilation, enable:
 
 The generated project outputs include:
 - `Assets/ShaderGen/<SourceFile>.generated.hlsl`
-- `Assets/ShaderGen/SubGraphs/` when `[ShaderGraphFunction]` annotation is present
+- `Assets/ShaderGen/SubGraphs/` when `[ShaderGraphFunction]` attribute is present
 
 The generated HLSL can then be referenced from Unity shader-side workflows.
 

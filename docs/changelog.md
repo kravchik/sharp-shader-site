@@ -5,19 +5,17 @@ title: Changelog
 
 # Changelog
 
-## 0.1.0-beta
+**0.1.0-beta** _07.04.2026_
 
-First public beta / preview scope.
+First public beta.
 
-Current highlights:
-- C# shader authoring through `ShaderFunction`, `ShaderStruct`, and explicit `ShaderGraphFunction`;
-- IDE-friendly, testable, and debuggable shader-facing authoring flow;
-- actionable diagnostics for the main unsupported authoring forms;
-- compile-time ordinary constants emitted by reference closure;
-- validated end-to-end, clean-install, and pre-release validation flows for the current narrow beta environment.
-
-Current intentional limits:
-- not full HLSL surface coverage;
-- not the full texture/resource completion story;
-- not broad cross-platform validation;
-- external constants remain outside the public beta contract.
+- C# shader annotations through `[ShaderFunction]`, `[ShaderStruct]`, and `[ShaderGraphFunction]`;
+- initial HLSL generation workflow inside Unity;
+- explicit generation diagnostics;
+- function and struct generation;
+- ordinary constant propagation;
+- Shader Graph node generation;
+- built-in helper surface;
+- partial CPU-side runtime and simulation surface;
+- asmdef support
+- public documentation, website, and UAS publication materials.

@@ -8,34 +8,33 @@ title: Troubleshooting
 ## `Generate` does not produce expected outputs
 
 Check:
-- that your shader-authoring code compiles as normal C# first;
+- that your shader code compiles as normal C# first;
 - that the package is installed and visible to Unity;
-- that you are using supported authoring markers such as `ShaderFunction`, `ShaderStruct`, and explicit `ShaderGraphFunction`.
+- that you are using markers such as `ShaderFunction`, `ShaderStruct`, and explicit `ShaderGraphFunction`.
 
 Then run:
 - `Tools/SharpShader/Generate`
 
 Expected outputs live in:
 - `Assets/ShaderGen/*.generated.hlsl`
-- `Assets/ShaderGen/SubGraphs/` when `ShaderGraphFunction` authoring is present
+- `Assets/ShaderGen/SubGraphs/` when `ShaderGraphFunction` is present
 
 ## Shader Graph output is missing or skipped
 
 This usually means one of two things:
 - the function was not explicitly marked as `ShaderGraphFunction`;
-- the current Shader Graph bridge does not support one of the involved types.
+- the Shader Graph bridge does not support one of the involved types.
 
-Shader Graph support is explicit and narrower than the normal HLSL generation path.
-A successful HLSL generate does not imply that every function can also become a SubGraph.
+Shader Graph support is explicit and narrower than the main HLSL generation path.
+A successful HLSL generate does not imply that the same function can also become a SubGraph.
 
-## Diagnostics appear for unsupported authoring
+## Diagnostics appear for unsupported source forms
 
-This is expected when code falls outside the supported surface.
-The intended behavior is:
-- supported authoring generates cleanly;
-- unsupported authoring fails with explicit diagnostics instead of partial or misleading output.
+When code falls outside the supported surface:
+- supported code generates cleanly;
+- unsupported code fails with explicit diagnostics instead of partial or misleading output.
 
-Use these docs as the contract boundary:
+Use these docs as the reference surface:
 - [Technical details](./technical-details.html)
 - [Resources](./resources.html)
 - [Docs index](./docs-index.html)
@@ -48,8 +47,8 @@ Visual demo shaders and materials currently live in `usecase1` rather than in th
 
 ## Unity recompiles broadly after generator-related changes
 
-This is a known limitation of the current generator delivery model.
-It does not mean generation is broken, but it can make iteration noisier than the final desired workflow.
+This is a known limitation of the generator delivery model.
+It does not mean generation is broken, but it can make iteration noisier than the intended workflow.
 
 ## Projects with custom `.asmdef` scopes only generate partially
 
@@ -60,8 +59,8 @@ Sharp Shader coverage follows those Unity assembly boundaries.
 
 In that case:
 - copy `SharpShader.Generator.dll` into the custom assembly scope that contains
-  Sharp Shader authoring code;
-- if several custom assembly scopes contain Sharp Shader authoring code, copy
+  Sharp Shader code;
+- if several custom assembly scopes contain Sharp Shader code, copy
   the DLL into each of them;
 - generated outputs still appear in the shared project output folder:
   - `Assets/ShaderGen/`
